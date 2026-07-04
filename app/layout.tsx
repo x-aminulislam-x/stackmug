@@ -33,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           name="google-site-verification"
           content="-Tt1ogxOHNGi3QB796VB3ohm6hmjsDkWfTphiBtwVpg"
         />
+        <meta name="msvalidate.01" content="8E8CF824ABAC607F1BAC21AAAFB3416E" />
       </head>
       <body
         className="flex min-h-screen flex-col bg-white font-sans antialiased text-gray-800"
