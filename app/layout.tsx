@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
-import './globals.css'; // Global styles
-import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
+import './globals.css'; // Global styles
 
 const inter = Inter({
   subsets: ['latin'],
@@ -21,13 +21,23 @@ export const metadata: Metadata = {
     default: 'StackMug | Premium Developer Mugs & Vessels',
     template: '%s | StackMug',
   },
-  description: 'High-performance, strictly-typed mugs and thermal containers built for programmers and tech teams. Designed to maintain caffeine temperature through complex compiler workflows.',
+  description:
+    'High-performance, strictly-typed mugs and thermal containers built for programmers and tech teams. Designed to maintain caffeine temperature through complex compiler workflows.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="flex min-h-screen flex-col bg-white font-sans antialiased text-gray-800" suppressHydrationWarning>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="-Tt1ogxOHNGi3QB796VB3ohm6hmjsDkWfTphiBtwVpg"
+        />
+      </head>
+      <body
+        className="flex min-h-screen flex-col bg-white font-sans antialiased text-gray-800"
+        suppressHydrationWarning
+      >
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
@@ -35,4 +45,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-
